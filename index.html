@@ -118,10 +118,31 @@
             margin-top: 1rem;
         }
 
+        .card {
+            border-radius: 2.25rem;
+            flex-direction: column;
+            padding: 1.5rem;
+            display: flex;
+            text-decoration: none;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 0.3rem;
+            border-radius: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 2rem;
+            line-height: 2rem;
+        }
+
         @media screen and (max-width: 767px) {
             #home {
                 padding-top: 4rem;
             }
+
             .info-text {
                 padding-left: 0.5rem;
             }
@@ -178,7 +199,7 @@
         <div class="container">
             <h1 class="poppins-bold">My Projects</h1>
             <div class="row">
-                <div class="col"></div>
+                <div class="col-12"></div>
             </div>
             <div class="row my-3 mx-1 d-flex align-items-stretch" id="container"></div>
         </div>
@@ -250,21 +271,32 @@
             });
         });
 
-        var names = ["SAM ACT-1", "SAM ACT-2", "SAM ACT-3", "SAM ACT-4"]
-        var texts = ["Pick an existing system of your choice, it can be social, technical, national, business, product, etc.", "Create an HTML website about a place in the world you would like to showcase.", "Create your GitHub page. This page will be the home page where your future works will be added.", "Create an HTML website that utilizes a free public API with JSON return. It can be about anything. It can have one or more pages."]
-        var links = ["https://drive.google.com/file/d/1dV0g7xDVLeYbtmykq_CJomYRavOzMVo0/view?usp=sharing", "https://obliviate1229.github.io/Japan", "https://obliviate1229.github.io/", "https://obliviate1229.github.io/API"]
-        var images = ["IMG/ACT1.png", "IMG/ACT2.jpeg", "IMG/ACT3.jpeg", "IMG/ACT4.png"];
+        var names = ["SAM ACT-1", "SAM ACT-2", "SAM ACT-3", "SAM ACT-4", "MT-01"]
+
+        var texts = ["Pick an existing system of your choice, it can be social, technical, national, business, product, etc.",
+            "Create an HTML website about a place in the world you would like to showcase.",
+            "Create your GitHub page. This page will be the home page where your future works will be added.",
+            "Create an HTML website that utilizes a free public API with JSON return. It can be about anything. It can have one or more pages.",
+            "Create a new page with a video feature by embedding using the YouTube embed API. Populate the page with relevant information. You can add as many videos as you want. You may apply other media as well."]
+
+        var links = ["https://drive.google.com/file/d/1dV0g7xDVLeYbtmykq_CJomYRavOzMVo0/view?usp=sharing",
+            "https://obliviate1229.github.io/Japan",
+            "https://obliviate1229.github.io/",
+            "https://obliviate1229.github.io/API",
+        "https://obliviate1229.github.io/MIDTERM"]
+
+        var images = ["IMG/ACT1.png", "IMG/ACT2.jpeg", "IMG/ACT3.jpeg", "IMG/ACT4.png", "IMG/ACT4.png"];
 
         for (var i = 0; i < names.length; i++) {
             var container = document.getElementById("container");
             container.innerHTML += `
-            <div class="col-12 col-md-4 d-flex align-items-stretch my-3">
+            <div class="col-12 col-lg-4 d-flex align-items-stretch my-3">
                 <div class="card">
                     <img src="${images[i]}" class="card-img-top" alt="${names[i]}">
                     <div class="card-body">
                         <h1 class="card-title poppins-regular text-center">${names[i]}</h1>
                         <p class="card-text mx-2 poppins-regular text-center">${texts[i]}</p>
-                        <a href="${links[i]}" class="btn btn-primary align-items-stretch">Visit Page</a>
+                        <a href="${links[i]}" class="btn btn-primary align-items-stretch ">Visit Page</a>
                     </div>
                 </div>
             </div>`;

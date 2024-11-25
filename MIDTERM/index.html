@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Genshin Impact</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .video {
+        height: 100%;
+        width: 400px;
+        pointer-events: none;
+        margin-left: 50%;
+        transform: translate(-50%);
+    }
+
+    .ytcontainer iframe {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        border: none;
+    }
+
+    .ytcontainer {
+        height: 0;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 50%;
+    }
+
+    #navbar {
+        backdrop-filter: blur(8px);
+        background-color: rgba(255, 255, 255, 0);
+        box-shadow: 0 5px 5px rgba(255, 255, 255, 1);
+        -webkit-backdrop-filter: blur(8px);
+    }
+
+    .navbar-brand {
+        width: 5rem;
+    }
+</style>
+
+<body oncontextmenu="return false">
+    <nav id="navbar" class="navbar navbar-expand-lg fs-3 fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="IMG/GENSHIN-LOGO.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav fs-5 ms-auto mb-2 mb-lg-0 text-center text-lg-start">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Elements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Nation</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="home" class="home-section mt-0">
+        <div class="ytcontainer">
+            <iframe class="video"
+                src="https://www.youtube.com/embed/TAlKhARUcoY?si=9DwN2H-Ns4Adk12j&amp;controls=0;disablekb=1&amp;mute=1&amp;autoplay=1&amp;loop=1&amp;"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div id="element" class="container py-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card text-center border-primary">
+                    <div class="card-body">
+                        <img src="IMG/Element_anemo.webp" alt="Anemo" class="img-fluid mb-3" style="width: 100px;">
+                        <h5 class="card-title">Anemo</h5>
+                        <p class="card-text">The element of wind, representing freedom and movement. Anemo users can
+                            manipulate wind to create powerful effects.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center border-primary">
+                    <div class="card-body">
+                        <img src="IMG/Element_anemo.webp" alt="Anemo" class="img-fluid mb-3" style="width: 100px;">
+                        <h5 class="card-title">Geo</h5>
+                        <p class="card-text">The element of earth, symbolizing strength and resilience. Geo users create
+                            protective barriers and summon rock constructs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center border-primary">
+                    <div class="card-body">
+                        <img src="IMG/Element_anemo.webp" alt="Anemo" class="img-fluid mb-3" style="width: 100px;">
+                        <h5 class="card-title">Pyro</h5>
+                        <p class="card-text">The element of fire, representing passion and destruction. Pyro users
+                            unleash flames to deal heavy damage.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center border-primary">
+                    <div class="card-body">
+                        <img src="IMG/Element_anemo.webp" alt="Anemo" class="img-fluid mb-3" style="width: 100px;">
+                        <h5 class="card-title">Cryo</h5>
+                        <p class="card-text">The element of ice, symbolizing calm and persistence. Cryo users freeze
+                            enemies and create icy attacks.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center border-primary">
+                    <div class="card-body">
+                        <img src="IMG/Element_anemo.webp" alt="Anemo" class="img-fluid mb-3" style="width: 100px;">
+                        <h5 class="card-title">Hydro</h5>
+                        <p class="card-text">The element of water, representing life and healing. Hydro users manipulate
+                            water for support and offense.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center border-primary">
+                    <div class="card-body">
+                        <img src="IMG/Element_anemo.webp" alt="Anemo" class="img-fluid mb-3" style="width: 100px;">
+                        <h5 class="card-title">Electro</h5>
+                        <p class="card-text">The element of electricity, symbolizing energy and speed. Electro users
+                            summon lightning for swift attacks.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center border-primary">
+                    <div class="card-body">
+                        <img src="IMG/Element_anemo.webp" alt="Anemo" class="img-fluid mb-3" style="width: 100px;">
+                        <h5 class="card-title">Dendro</h5>
+                        <p class="card-text">The element of nature, symbolizing growth and wisdom. Dendro users
+                            manipulate plants for unique elemental reactions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

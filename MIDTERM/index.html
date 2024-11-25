@@ -74,9 +74,30 @@
     }
 
     div {
-    display: block;
-    unicode-bidi: isolate;
-}
+        display: block;
+        unicode-bidi: isolate;
+    }
+
+    @media screen and (max-width: 767px) {
+        .section {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+        .navbar-brand {
+            width: 1rem;
+        }
+
+        .home-section {
+            margin-top: 5rem;
+        }
+
+        .section-element {
+            padding-top: 5rem;
+        }
+        .container {
+            width: 25em;
+        }
+    }
 </style>
 
 <body oncontextmenu="return false">
@@ -151,7 +172,7 @@
             for (var i = 0; i < names.length; i++) {
                 var container = document.getElementById("container");
                 container.innerHTML += `
-            <div class="col-12 col-lg-3 col-md-4 col-s-6 d-flex align-items-stretch my-3">
+            <div class="col-12 col-lg-3 col-md-4 d-flex align-items-stretch my-3">
                 <div class="card">
                     <img src="${images[i]}" class="card-img-top" alt="${names[i]}">
                     <div class="card-body">

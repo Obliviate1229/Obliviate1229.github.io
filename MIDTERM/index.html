@@ -17,13 +17,13 @@
         scroll-behavior: smooth;
     }
 
+    body {
+        background-color: #151a23;
+    }
+
     img {
         max-width: 100%;
         display: inline-block;
-    }
-
-    body {
-        background-color: #151a23;
     }
 
     .video {
@@ -48,13 +48,15 @@
         width: 100%;
         position: relative;
         overflow: hidden;
-        padding-bottom: 50%;
+        padding-bottom: 56%;
     }
 
     #navbar {
+        font-family: 'poppins';
+        font-weight: bold;
         backdrop-filter: blur(8px);
         background-color: rgba(255, 255, 255, 0);
-        box-shadow: 0 5px 5px rgba(255, 255, 255, 1);
+        box-shadow: 0 5px 5px rgba(255, 255, 255, 0);
         -webkit-backdrop-filter: blur(8px);
     }
 
@@ -64,8 +66,16 @@
 
     .card {
         border-radius: 2rem 1rem;
-        box-shadow: 0px 3px 3px rgba(0, 0, 0, 1);
-        background-color: aliceblue;
+        background-color: rgb(42, 84, 121);
+        flex-direction: column;
+        display: flex;
+        text-decoration: none;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     }
 
     .section {
@@ -78,11 +88,55 @@
         unicode-bidi: isolate;
     }
 
+    .card img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 0.5rem;
+        border-radius: 2rem 1rem;
+    }
+
+    .nation-img {
+        width: 100%;
+        height: auto;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        display: block;
+    }
+
+    .card-title {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        font-family: 'poppins';
+        font-weight: bold;
+    }
+
+    .card-text {
+        font-size: 1.2rem;
+        font-family: 'poppins';
+    }
+
+    .nation-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        font-family: 'poppins';
+    }
+
+    .nation-description {
+        font-size: 1.3rem;
+        font-family: 'poppins';
+    }
+
+    .nation-element {
+        font-size: 1.05rem;
+        font-family: 'poppins';
+    }
+
     @media screen and (max-width: 767px) {
         .section {
             padding-top: 5rem;
             padding-bottom: 5rem;
         }
+
         .navbar-brand {
             width: 1rem;
         }
@@ -94,9 +148,7 @@
         .section-element {
             padding-top: 5rem;
         }
-        .container {
-            width: 25em;
-        }
+
     }
 </style>
 
@@ -113,15 +165,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav fs-5 ms-auto mb-2 mb-lg-0 text-center text-lg-start">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#element">Elements</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Nation</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#element">Elements</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#nation">Nation</a></li>
                 </ul>
             </div>
         </div>
@@ -130,59 +176,130 @@
     <div id="home" class="home-section mt-0">
         <div class="ytcontainer">
             <iframe class="video"
-                src="https://www.youtube.com/embed/TAlKhARUcoY?si=9DwN2H-Ns4Adk12j&amp;controls=0;disablekb=1&amp;mute=1&amp;autoplay=1&amp;loop=1&amp;rel=0&amp;"
+                src="https://www.youtube.com/embed/TAlKhARUcoY?si=9DwN2H-Ns4Adk12j&amp;controls=0&amp;disablekb=1&amp;mute=1&amp;autoplay=1&amp;loop=1&amp;rel=0&amp;cc_load_policy=0&amp;"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </div>
 
-    <div id="element" class="section section-element text-white text-center">
+    <div id="element" class="section text-white text-center">
         <div class="container">
-            <h1 class="align-content-start" style="font-size: 2.7rem;">Elements</h1>
-            <div class="row">
-                <div class="col"></div>
-            </div>
-            <div class="row d-flex align-items-stretch" id="container"></div>
+            <h1 id="text" style="font-size: 2.8rem;font-family: 'poppins';font-weight: bold;">Elements in Genshin Impact
+            </h1>
+            <div class="row d-flex align-items-stretch justify-content-center" id="container"></div>
         </div>
-        </section>
+    </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
+    <div id="nation" class="section text-white text-center">
+        <div class="container">
+            <h1 class="text-center mb-4" style="font-size: 2.8rem;font-family: 'poppins';font-weight: bold;">Nations
+                of Genshin Impact</h1>
+            <div class="row d-flex align-items-stretch justify-content-center" id="nation-container"></div>
+        </div>
+    </div>
 
-        <script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 
-            var names = ["ANEMO", "GEO", "PYRO", "CRYO", "HYDRO", "ELECTRO", "DENDRO"]
-            var texts = ["The element of wind, representing freedom and movement. Anemo users can manipulate wind to create powerful effects.",
-                "The element of earth, symbolizing strength and resilience. Geo users create protective barriers and summon rock constructs.",
-                "The element of fire, representing passion and destruction. Pyro users unleash flames to deal heavy damage.",
-                "The element of ice, symbolizing calm and persistence. Cryo users freeze enemies and create icy attacks.",
-                "The element of water, representing life and healing. Hydro users manipulate water for support and offense.",
-                "The element of electricity, symbolizing energy and speed. Electro users summon lightning for swift attacks.",
-                "The element of nature, symbolizing growth and wisdom. Dendro users manipulate plants for unique elemental reactions.",]
-            var images = ["/IMG/GENSHIN/ANEMO.svg",
-                "/IMG/GENSHIN/GEO.svg",
-                "/IMG/GENSHIN/PYRO.svg",
-                "/IMG/GENSHIN/CRYO.svg",
-                "/IMG/GENSHIN/HYDRO.svg",
-                "/IMG/GENSHIN/ELECTRO.svg",
-                "/IMG/GENSHIN/DENDRO.svg"];
+    <script>
 
-            for (var i = 0; i < names.length; i++) {
-                var container = document.getElementById("container");
-                container.innerHTML += `
-            <div class="col-12 col-lg-3 col-md-4 d-flex align-items-stretch my-3">
-                <div class="card">
-                    <img src="${images[i]}" class="card-img-top" alt="${names[i]}">
-                    <div class="card-body">
-                        <h1 class="card-title poppins-regular text-center">${names[i]}</h1>
-                        <p class="card-text mx-2 poppins-regular text-center">${texts[i]}</p>
+        const elements = [
+            { name: "ANEMO", text: "The element of wind, representing freedom and movement. Anemo users can manipulate wind to create powerful effects.", image: "/IMG/GENSHIN/ANEMO.svg" },
+            { name: "GEO", text: "The element of earth, symbolizing strength and resilience. Geo users create protective barriers and summon rock constructs.", image: "/IMG/GENSHIN/GEO.svg" },
+            { name: "PYRO", text: "The element of fire, representing passion and destruction. Pyro users unleash flames to deal heavy damage.", image: "/IMG/GENSHIN/PYRO.svg" },
+            { name: "CRYO", text: "The element of ice, symbolizing calm and persistence. Cryo users freeze enemies and create icy attacks.", image: "/IMG/GENSHIN/CRYO.svg" },
+            { name: "HYDRO", text: "The element of water, representing life and healing. Hydro users manipulate water for support and offense.", image: "/IMG/GENSHIN/HYDRO.svg" },
+            { name: "ELECTRO", text: "The element of electricity, symbolizing energy and speed. Electro users summon lightning for swift attacks.", image: "/IMG/GENSHIN/ELECTRO.svg" },
+            { name: "DENDRO", text: "The element of nature, symbolizing growth and wisdom. Dendro users manipulate plants for unique elemental reactions.", image: "/IMG/GENSHIN/DENDRO.svg" },
+        ];
+
+        const elementContainer = document.getElementById("container");
+        elements.forEach(element => {
+            elementContainer.innerHTML += `
+                <div class="col-12 col-lg-3 col-md-4 d-flex align-items-stretch my-3">
+                    <div class="card">
+                        <img src="${element.image}" class="card-img-top" alt="${element.name}">
+                        <div class="card-body">
+                            <h1 class="card-title text-center text-white">${element.name}</h1>
+                            <p class="card-text mx-2 text-center text-white">${element.text}</p>
+                        </div>
                     </div>
-                </div>
-            </div>`;
-            }
-        </script>
+                </div>`;
+        });
+
+        const nations = [
+            {
+                name: "Mondstadt",
+                element: "Anemo",
+                description: "The City of Freedom, guided by Barbatos, the Anemo Archon.",
+                image: "/IMG/GENSHIN/NATION/MONDSTADT.jpg"
+            },
+            {
+                name: "Liyue",
+                element: "Geo",
+                description: "The Harbor of Contracts, ruled by Morax, the Geo Archon.",
+                image: "/IMG/GENSHIN/NATION/LIYUE.jpg"
+            },
+            {
+                name: "Inazuma",
+                element: "Electro",
+                description: "The Land of Eternity, under the Raiden Shogun, the Electro Archon.",
+                image: "/IMG/GENSHIN/NATION/INAZUMA.jpg"
+            },
+            {
+                name: "Sumeru",
+                element: "Dendro",
+                description: "The Nation of Wisdom, governed by Kusanali, the Dendro Archon.",
+                image: "/IMG/GENSHIN/NATION/SUMERU.jpg"
+            },
+            {
+                name: "Fontaine",
+                element: "Hydro",
+                description: "The Nation of Justice, overseen by Focalors, the Hydro Archon.",
+                image: "/IMG/GENSHIN/NATION/FONTAINE.jpg"
+            },
+            {
+                name: "Natlan",
+                element: "Pyro",
+                description: "The Land of War, presided over by Murata, the Pyro Archon.",
+                image: "/IMG/GENSHIN/NATION/NATLAN.jpg"
+            },
+            {
+                name: "Snezhnaya",
+                element: "Cryo",
+                description: "The Land of Ice and Power, ruled by Tsaritsa, the Cryo Archon.",
+                image: "/IMG/GENSHIN/NATION/SNEZHNAYA.webp"
+            },
+        ];
+
+        const nationContainer = document.getElementById("nation-container");
+        nations.forEach(nation => {
+            nationContainer.innerHTML += `
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm border-0">
+                        <img src="${nation.image}" alt="${nation.name}" class="nation-img">
+                        <div class="card-body">
+                            <h5 class="nation-title text-white">${nation.name}</h5>
+                            <p class="nation-element text-white">Element: <strong>${nation.element}</strong></p>
+                            <p class="nation-description text-white">${nation.description}</p>
+                        </div>
+                    </div>
+                </div>`;
+        });
+
+        const textElement = document.getElementById('text');
+
+        const colors = ['#16F529', 'orange', 'red', 'cyan', 'blue', 'purple', 'green']
+
+        let currentColorIndex = 0;
+
+        function changeColor() {
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+            textElement.style.color = colors[currentColorIndex];
+        }
+
+        setInterval(changeColor, 1000);
+    </script>
 </body>
 
 </html>

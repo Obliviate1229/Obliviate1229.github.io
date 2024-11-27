@@ -22,8 +22,8 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <style>
-        .selector-for-some-widget {
-            box-sizing: content-box;
+        * {
+            box-sizing: border-box;
         }
 
         div {
@@ -164,6 +164,16 @@
             background-color: #133e87;
             padding-top: 3.5rem;
             padding-bottom: 0;
+            padding: 2rem 1rem;
+        }
+
+        .overline {
+            color: #f2f0ee;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            margin-bottom: .25rem;
+            font-size: 1rem;
+            line-height: 1rem;
         }
 
         .footer-grid {
@@ -173,12 +183,24 @@
             grid-row-gap: 16px;
             grid-column-gap: 16px;
             grid-auto-columns: 1fr;
-            display: grid;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 1.5rem;
+        }
+
+        .footer-info {
+            flex: 1 1 calc(50% - 1rem);
+            min-width: 200px;
+            max-width: 300px;
+            margin: 0 auto;
         }
 
         .footer-info img {
             width: 6rem;
             border-radius: 1.5rem;
+            margin: 0 auto 1rem;
+            display: block;
         }
 
         .footer-text-one {
@@ -209,6 +231,12 @@
             background-color: #133e87;
         }
 
+        .cr p {
+            margin: 0;
+            font-size: 0.875rem;
+            color: #f2f0ee;
+        }
+
         @media screen and (max-width: 767px) {
             #home {
                 padding-top: 4rem;
@@ -216,6 +244,15 @@
 
             .info-text {
                 padding-left: 0.5rem;
+            }
+
+            .footer-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-info {
+                max-width: 100%;
             }
         }
     </style>
@@ -379,12 +416,12 @@
                                 Contact Me
                             </div>
                             <div class="description-text footer-text-two">
-                                <i class="fa-light fa-envelope" aria-hidden="true"
+                                <i class="fa-solid fa-envelope" aria-hidden="true"
                                     style="color:#f2f0ee;font-size: .75rem;"></i>
                                 dustinkyle122915@gmail.com
                             </div>
                             <div class="description-text footer-text-two">
-                                <i class="fa-light fa-phone" aria-hidden="true"
+                                <i class="fa-solid fa-phone" aria-hidden="true"
                                     style="color:#f2f0ee;font-size: .75rem;"></i>+63998-938-3995
                             </div>
                         </div>
@@ -393,7 +430,7 @@
                                 Address
                             </div>
                             <div class="description-text footer-text-two">
-                                <i class="fa-light fa-location-dot" aria-hidden="true"
+                                <i class="fa-solid fa-location-dot" aria-hidden="true"
                                     style="color: #f2f0ee;font-size: .75rem;"></i> PUP
                                 Sto. Tomas Campus
                                 <br>A. Bonifacio St. Poblacion II,<br>Sto. Tomas
@@ -417,6 +454,10 @@
                                     <i class="fa-brands fa-linkedin mb-4" aria-hidden="true"
                                         style="color: #f2f0ee;font-size:1.5rem;"></i>
                                 </a>
+                                <a href="https://discord.com/users/561175979100209157">
+                                    <i class="fa-brands fa-discord mb-4" aria-hidden="true"
+                                        style="color: #f2f0ee;font-size:1.5rem;"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -425,7 +466,7 @@
         </div>
     </div>
 
-    <div class="cr">
+    <div class="cr text-center">
         <div class="container">
             <div class="crcr text-center">
                 <p class="footer-text-one m-0 fst-italic">This is Dustin Personal Website.</p>

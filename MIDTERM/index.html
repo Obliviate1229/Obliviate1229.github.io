@@ -29,10 +29,10 @@
 
     .video {
         height: 100%;
-        width: 400px;
+        width: 100%;
         pointer-events: none;
-        margin-left: 50%;
-        transform: translate(-50%);
+        margin: 0 auto;
+        display: block;
     }
 
     .ytcontainer iframe {
@@ -134,14 +134,17 @@
 
     @media screen and (max-width: 767px) {
         .section {
-            padding-top: 5rem;
-            padding-bottom: 4.5rem;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
         }
 
         .navbar-brand {
             width: .5rem;
         }
 
+        .ytcontainer {
+            padding-bottom: 56%;
+        }
         .home-section {
             margin-top: 5rem;
         }
@@ -150,6 +153,22 @@
             padding-top: 5rem;
         }
 
+        .card-title {
+            font-size: 1.5rem;
+        }
+
+        .card-text {
+            font-size: 1rem;
+        }
+
+        .nation-title {
+            font-size: 1.8rem;
+        }
+
+        .nation-description,
+        .nation-element {
+            font-size: 1rem;
+        }
     }
 </style>
 
@@ -217,7 +236,7 @@
         const elementContainer = document.getElementById("container");
         elements.forEach(element => {
             elementContainer.innerHTML += `
-                <div class="col-12 col-lg-3 col-md-4 d-flex align-items-stretch my-3">
+                <div class="col-lg-3 col-md-4 mb-4 d-flex align-items-stretch my-3">
                     <div class="card">
                         <img src="${element.image}" class="card-img-top" alt="${element.name}">
                         <div class="card-body">
@@ -276,7 +295,7 @@
         const nationContainer = document.getElementById("nation-container");
         nations.forEach(nation => {
             nationContainer.innerHTML += `
-                <div class="col-md-4 mb-4">
+                <div class="col-12 col-md-4 mb-4">
                     <div class="card shadow-sm border-0">
                         <img src="${nation.image}" alt="${nation.name}" class="nation-img">
                         <div class="card-body">
